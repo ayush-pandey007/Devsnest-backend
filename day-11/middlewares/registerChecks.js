@@ -7,7 +7,7 @@ const registerCheck = (req, res, next) => {
     typeof password === "string" &&
     typeof confirmPassword === "string" &&
     email.length > 0 &&
-    password.length > 8 &&
+    password.length >= 8 &&
     confirmPassword === password &&
     emailValidate(email) &&
     passwordValidate(password)
